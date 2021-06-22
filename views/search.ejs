@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Search Result</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="/css/search.css">
+
+</head>
+
+<body>
+  <h1>I hope it helped 😊</h1>
+
+  <div class="box">
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Bloodtype</th>
+            <th>Phone number</th>
+            <th>Plasma</th>
+            <th>City</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <% donors.forEach(function(data){ %>
+          <tr>
+            <td><%= data.name %></td>
+            <td><%= data.bloodtype %></td>
+            <td><%= data.phno %></td>
+            <td><%= data.plasma%></td>
+            <td><%= data.city %></td>
+          </tr>
+
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

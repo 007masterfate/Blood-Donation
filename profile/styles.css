@@ -1,0 +1,77 @@
+body{
+  background-color: black;
+  width: 100%;
+  height:auto;
+  color: white;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.abt{
+  margin-bottom: 10px;
+}
+.pr1{
+  margin-top: 100px;
+  text-align: left;
+  padding-left: 120px;
+
+}
+.abt-text,.edu-text,.pro-text{
+  transition: opacity 2s ease-out;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  background-color: #1c1c1c	;
+  border-radius: 3%;
+}
+
+.abt:hover + .abt-text{
+  opacity: 1;
+  height: auto;
+  padding: 25px 25px 25px 25px;
+}
+
+.edu:hover + .edu-text{
+  opacity: 1;
+  height: auto;
+  padding: 25px;
+}
+.pro:hover + .pro-text{
+  opacity: 1;
+  height: auto;
+  padding: 25px;
+}
+
+img{
+  height: 100vh;
+}
+
+
+
+
+h1::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+h1:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: hsl(120,100%,50%);
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+h1 {
+  position: relative;
+  font-size: 5rem;
+}
